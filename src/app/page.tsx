@@ -28,6 +28,13 @@ const skills = {
     },
     { name: "Tailwind", level: "⭐️", comment: "実務で2年以上の経験" },
     { name: "ChakraUI", level: "⭕️", comment: "複数プロジェクトで使用" },
+    {
+      name: "Vue.js",
+      level: "⭕️",
+      comment:
+        "Ruby on Railsのビューエンジンとの併用を業務で経験あり（Vue2系）Nuxt.jsは組まれたLPを保守したことがある程度。既存のVue.jsのプロジェクトを調べながら自分で実装・テストコードを書いていくことはできるレベル感",
+    },
+    { name: "React", level: "⭕️", comment: "複数プロジェクトで使用" },
     { name: "React Native", level: "▲", comment: "個人開発で使用経験あり" },
   ],
   AI: [
