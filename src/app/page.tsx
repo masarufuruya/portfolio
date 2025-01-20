@@ -159,7 +159,7 @@ SPAへのシステムリプレース・新機能開発・ベトナム人エン�
 
 export default function Home() {
   return (
-    <Box minH="100vh" pt={20}>
+    <Box minH="100vh">
       <Navigation />
       <Container maxW="container.lg" py={8}>
         {/* 基本情報セクション */}

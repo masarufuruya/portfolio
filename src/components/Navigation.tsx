@@ -47,18 +47,10 @@ export function Navigation() {
   );
 
   return (
-    <Box
-      as="nav"
-      px={4}
-      py={4}
-      position="fixed"
-      w="full"
-      bg="white"
-      zIndex={1000}
-    >
+    <Box as="nav" px={4} position="fixed" w="full" bg="white">
       <Flex h={16} alignItems="center" justifyContent="space-between">
         <Link as={NextLink} href="/" fontWeight="bold" fontSize="xl">
-          Portfolio
+          MASARU FURUYA
         </Link>
 
         {/* Desktop Navigation */}

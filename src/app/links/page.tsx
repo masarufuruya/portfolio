@@ -30,7 +30,7 @@ const links = [
 
 export default function Links() {
   return (
-    <Box minH="100vh" pt={20}>
+    <Box minH="100vh">
       <Navigation />
       <Container maxW="container.lg" py={8}>
         <Stack direction="column" spacing={8}>
