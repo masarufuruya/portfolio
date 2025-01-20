@@ -15,27 +15,22 @@ const links = [
   {
     platform: "Zenn",
     url: "https://zenn.dev/nana",
-    color: "#3EA8FF",
   },
   {
     platform: "Note",
     url: "https://note.com/eve_key/",
-    color: "#41C9B4",
   },
   {
     platform: "Qiita",
     url: "https://qiita.com/yugo-ibuki",
-    color: "#55C500",
   },
   {
     platform: "Reading Book Blog",
     url: "https://ugo-ev.hatenablog.com/",
-    color: "#333333",
   },
   {
     platform: "Novel",
     url: "https://sizu.me/ugo",
-    color: "#6B7280",
   },
 ];
 
@@ -60,7 +55,7 @@ export default function Links() {
           <Stack direction="column" spacing={6}>
             {links.map((link, index) => (
               <Box key={index}>
-                <Heading as="h2" size="md" color={link.color} mb={2}>
+                <Heading as="h2" size="md" mb={2}>
                   {link.platform}
                 </Heading>
                 <ChakraLink
