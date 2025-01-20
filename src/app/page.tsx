@@ -33,28 +33,23 @@ const skills = {
   ],
   フロントエンド: [
     {
-      name: "Next.js (AppRouter)",
+      name: "React",
       level: "⭐️",
       comment: "実務で2年以上の経験",
     },
-    { name: "Tailwind", level: "⭐️", comment: "実務で2年以上の経験" },
-    { name: "ChakraUI", level: "⭕️", comment: "複数プロジェクトで使用" },
     {
       name: "Vue.js",
       level: "⭕️",
       comment:
         "Ruby on Railsのテンプレートエンジンとの併用を業務で経験あり（Vue2系）Nuxt.jsは組まれたLPを保守したことがある程度。既存のVue.jsのプロジェクトを調べながら自分で実装・テストコードを書いていくことはできるレベル感",
     },
-    { name: "React", level: "⭕️", comment: "複数プロジェクトで使用" },
     { name: "React Native", level: "▲", comment: "個人開発で使用経験あり" },
+    { name: "Flutter", level: "▲", comment: "個人開発で使用経験あり" },
   ],
-  AI: [
-    { name: "Dify", level: "⭕️", comment: "実務で使用経験あり" },
-    {
-      name: "Cursor Composer Agent",
-      level: "⭕️",
-      comment: "実務で使用経験あり",
-    },
+  インフラ: [
+    { name: "Terraform", level: "⭕️", comment: "実務で2年以上の経験" },
+    { name: "GCP", level: "⭐️", comment: "実務で3年以上の経験" },
+    { name: "AWS", level: "⭕️", comment: "実務で2年以上の経験" },
   ],
   マネジメント: [
     {
@@ -63,19 +58,6 @@ const skills = {
       comment: "5年以上の経験",
     },
     { name: "ピープルマネジメント", level: "⭕️", comment: "3年以上の経験" },
-    { name: "テックマネジメント", level: "⭕️", comment: "2年以上の経験" },
-    { name: "プロダクトマネジメント", level: "▲", comment: "1年程度の経験" },
-  ],
-  その他: [
-    {
-      name: "クリーンアーキテクチャ",
-      level: "⭕️",
-      comment: "実務での適用経験あり",
-    },
-    { name: "CI/CD", level: "⭐️", comment: "5年以上の経験" },
-    { name: "Terraform", level: "⭕️", comment: "実務で2年以上の経験" },
-    { name: "GCP", level: "⭐️", comment: "実務で3年以上の経験" },
-    { name: "AWS", level: "⭕️", comment: "実務で2年以上の経験" },
   ],
 };
 
