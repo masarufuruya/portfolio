@@ -11,13 +11,24 @@ import {
   Badge,
 } from "@chakra-ui/react";
 import { Navigation } from "@/components/Navigation";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 // スキルデータ
 const skills = {
   バックエンド: [
-    { name: "Ruby on Rails", level: "⭐️", comment: "実務で5年以上の経験" },
-    { name: "Nest.js", level: "⭕️", comment: "実務で1年以上の経験" },
-    { name: "Firebase", level: "⭕️", comment: "複数プロジェクトで使用" },
+    {
+      name: "Ruby on Rails",
+      level: "⭐️",
+      comment:
+        "実務で5年以上の経験。要件を理解して自分で設計しながらコードを書くことができるレベル",
+    },
+    { name: "Nest.js", level: "▲", comment: "個人開発で使用中" },
+    {
+      name: "Firebase",
+      level: "⭕️",
+      comment: "実務と個人開発でFirestoreを利用",
+    },
     { name: "Supabase", level: "▲", comment: "個人開発で使用経験あり" },
   ],
   フロントエンド: [
@@ -71,7 +82,7 @@ const skills = {
 // 職務経歴データ
 const workHistory = [
   {
-    period: "2022/07 - 現在",
+    period: "2022/07-現在",
     company: "PharmaX株式会社",
     type: "正社員",
     description: `新規事業のフロントエンドのリードエンジニアや、スクラムマスターとしてスクラム開発の主導を実施。
@@ -86,8 +97,8 @@ const workHistory = [
 
 元々はアプリケーションエンジニアとして参画しましたが、データエンジニアとして全社データ分析基盤の開発・データの民主化の啓蒙を担当しました。
 
-• 全社データ分析基盤の開発: エンジニアとしてdbt×BigQueryを用いたデータ分析基盤を企画・設計・開発
-• 薬剤師向けにデータの民主化の啓蒙: 薬剤師がSQLを書けるようになるために基盤の整備・勉強の企画/運営`,
+• **全社データ分析基盤の開発:** エンジニアとしてdbt×BigQueryを用いたデータ分析基盤を企画・設計・開発
+• **薬剤師向けにデータの民主化の啓蒙:** 薬剤師がSQLを書けるようになるために基盤の整備・勉強の企画/運営`,
   },
   {
     period: "2020/05-2021/05",
@@ -97,7 +108,7 @@ const workHistory = [
 
 新規サービスの立ち上げに伴うMVP開発と高単価サブスク化をミッションに必要な新機能・決済機能を開発・リリース。黒字化まで実現しました。
 
-• オンラインパーソナル型フィットネスサービスの開発: エンジニアとしてRuby on Railsを用いたMVP開発・高単価化に必要な機能開発`,
+• **オンラインパーソナル型フィットネスサービスの開発:** エンジニアとしてRuby on Railsを用いたMVP開発・高単価化に必要な機能開発`,
   },
   {
     period: "2019/01-2020/04",
@@ -105,7 +116,7 @@ const workHistory = [
     type: "業務委託",
     description: `副業をしたいワーカーと企業をつなぐ副業マッチングプラットフォームを提供。ワーカー向けの予実管理サービスをリリースしました。
 
-• ワーカー向けの予実管理サービスの開発: エンジニアとしてRuby on Railsを用いた開発`,
+• **ワーカー向けの予実管理サービスの開発:** エンジニアとしてRuby on Railsを用いた開発`,
   },
   {
     period: "2018/01-2018/12",
@@ -115,8 +126,8 @@ const workHistory = [
 
 R&D活動としてWebのReact VR・ARを用いたPoC開発をリード。この時に研究開発していたAR分野が現在の主力事業に成長しました。
 
-• モバイルアプリの開発: エンジニアとしてReact Native・Reduxを用いた開発
-• Web VR・AR領域の研究/PoC開発: Web VR・ARの開発基盤構築・PoC開発をリード`,
+• **モバイルアプリの開発:** エンジニアとしてReact Native・Reduxを用いた開発
+• **Web VR・AR領域の研究/PoC開発:** Web VR・ARの開発基盤構築・PoC開発をリード`,
   },
   {
     period: "2017/01-2017/12",
@@ -128,8 +139,8 @@ R&D活動としてWebのReact VR・ARを用いたPoC開発をリード。この�
 
 既存のRuby on Rails環境へのReactの導入・設計・浸透までリードエンジニアとして実施しました。
 
-• オンライン英会話サービス・ベストティーチャーの開発: エンジニアとしてRuby on Rails・JQueryを用いた開発
-• WebフロントエンドのリードエンジニアとしてReactのアーキテクト・導入: Reactの開発基盤構築・Reactを用いてベストレを開発`,
+• **オンライン英会話サービス・ベストティーチャーの開発:** エンジニアとしてRuby on Rails・JQueryを用いた開発
+• **WebフロントエンドのリードエンジニアとしてReactのアーキテクト・導入:** Reactの開発基盤構築・Reactを用いてベストレを開発`,
   },
   {
     period: "2016/01-2016/12",
@@ -139,7 +150,7 @@ R&D活動としてWebのReact VR・ARを用いたPoC開発をリード。この�
 スモールtoB向けのノーコードHP作成サービスであるペライチにアプリケーションエンジニアとして参画。
 Webフロントエンドやサーバーサイドまで広く担当し、在籍中にスモール事業者が自社のサイトに決済を簡単に組み込めるペライチ決済を開発・リリースしました。
 
-• ノーコードHP作成サービス・ペライチの開発: エンジニアとしてCakePHP・Backbone.jsを用いた機能開発を担当。`,
+• **ノーコードHP作成サービス・ペライチの開発:** エンジニアとしてCakePHP・Backbone.jsを用いた機能開発を担当。`,
   },
   {
     period: "2014/05-2015/12",
@@ -149,9 +160,9 @@ Webフロントエンドやサーバーサイドまで広く担当し、在籍�
 先行する競合他社の類似プロダクトに追いつくため、新規機能の拡充・他社以上に使いやすいUXを実現していくため当時先進的だったSPAへのリプレースを実施。
 SPAへのシステムリプレース・新機能開発・ベトナム人エンジニアのコード品質チェックを担当しました。
 
-• SNSアカウント分析・管理SaaSの開発・リプレース: エンジニアとしてAngular1系・Node.js（Express）を用いたSPA開発をリード。
-• 各SNS (Facebook・Twitter)連携用の基盤開発: エンジニアとしてAWS上にSQSを用いたジョブキューシステムの構築・アプリケーション用のEC2の運用環境を整備。
-• ベトナム人メンバーのコード品質チェック: エンジニアリーダーとしてベトナム人メンバーのコード・設計レビューを担当。`,
+• **SNSアカウント分析・管理SaaSの開発・リプレース:** エンジニアとしてAngular1系・Node.js（Express）を用いたSPA開発をリード。
+• **各SNS (Facebook・Twitter)連携用の基盤開発:** エンジニアとしてAWS上にSQSを用いたジョブキューシステムの構築・アプリケーション用のEC2の運用環境を整備。
+• **ベトナム人メンバーのコード品質チェック:** エンジニアリーダーとしてベトナム人メンバーのコード・設計レビューを担当。`,
   },
   {
     period: "2012/04-2014/04",
@@ -159,8 +170,8 @@ SPAへのシステムリプレース・新機能開発・ベトナム人エン�
     type: "正社員",
     description: `2012年から2014年までニフティ株式会社のベンチャー支援を行う部署で、アプリケーションエンジニアとして業務に従事しました。支援先のベンチャー企業の新規事業としてSNS管理SaaSの立ち上げにおけるシステム設計、開発、検証、リリースまで担当しました。
 
-• SNSアカウント分析・管理SaaSの開発: エンジニアとしてCakePHP・JQueryを用いたMPA開発をリード。
-• ベトナムオフショアチームのプロジェクトマネジメント: PjMとしてベトナム現地で現地メンバーのコード品質チェックと開発ディレクションを担当。`,
+• **SNSアカウント分析・管理SaaSの開発:** エンジニアとしてCakePHP・JQueryを用いたMPA開発をリード。
+• **ベトナムオフショアチームのプロジェクトマネジメント:** PjMとしてベトナム現地で現地メンバーのコード品質チェックと開発ディレクションを担当。`,
   },
 ];
 
@@ -203,9 +214,19 @@ export default function Home() {
               <Text fontWeight="bold" fontSize="2xl" mb={2}>
                 {work.company}（{work.period}） {work.type}
               </Text>
-              <Text color="gray.600" whiteSpace="pre-wrap">
-                {work.description}
-              </Text>
+              <Box color="gray.600">
+                <ReactMarkdown
+                  remarkPlugins={[remarkGfm]}
+                  components={{
+                    p: (props) => <Text whiteSpace="pre-wrap" {...props} />,
+                    strong: (props) => (
+                      <Text as="span" fontWeight="bold" {...props} />
+                    ),
+                  }}
+                >
+                  {work.description}
+                </ReactMarkdown>
+              </Box>
             </Box>
           ))}
         </Stack>
@@ -213,7 +234,7 @@ export default function Home() {
         {/* スキルセクション */}
         <Stack direction="column" spacing={8}>
           <Heading as="h2" size="lg">
-            スキル
+            スキル（▲: 学習中、⭕️: 一人前、⭐️: 得意）
           </Heading>
           {Object.entries(skills).map(([category, items]) => (
             <Box key={category} w="full">
