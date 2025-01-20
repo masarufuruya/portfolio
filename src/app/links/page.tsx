@@ -34,7 +34,7 @@ export default function Links() {
       <Navigation />
       <Container maxW="container.lg" py={8}>
         <Stack direction="column" spacing={8}>
-          <Heading as="h1" size="xl" mb={4}>
+          <Heading as="h1" size="xl" mb={4} mt={16}>
             Web Links
           </Heading>
           {links.map((link, index) => (

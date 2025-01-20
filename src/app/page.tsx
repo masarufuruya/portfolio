@@ -164,17 +164,9 @@ export default function Home() {
       <Container maxW="container.lg" py={8}>
         {/* 基本情報セクション */}
         <Stack direction="column" spacing={8} mb={12}>
-          <Box textAlign="center" w="full">
-            <Image
-              src="/profile.jpg"
-              alt="Profile"
-              borderRadius="full"
-              boxSize="200px"
-              mx="auto"
-              mb={4}
-            />
+          <Box textAlign="center" w="full" mt={16}>
             <Heading as="h1" size="xl" mb={2}>
-              M.Furuya
+              MASARU FURUYA
             </Heading>
             <Text fontSize="lg" color="gray.600">
               フルスタックエンジニア / エンジニアリングマネージャー
