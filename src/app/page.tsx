@@ -161,7 +161,7 @@ export default function Home() {
   return (
     <Box minH="100vh">
       <Navigation />
-      <Container maxW="container.lg" py={8}>
+      <Container maxW="container.lg" py={8} mb={20}>
         {/* 基本情報セクション */}
         <Stack direction="column" spacing={8} mb={12}>
           <Box textAlign="center" w="full" mt={16}>
@@ -169,13 +169,9 @@ export default function Home() {
               MASARU FURUYA
             </Heading>
             <Text fontSize="lg" color="gray.600">
-              フルスタックエンジニア / エンジニアリングマネージャー
+              Software Engineer / Engineering Manager
             </Text>
           </Box>
-          <Text>
-            フルスタックエンジニアとしての技術力と、エンジニアリングマネージャーとしてのマネジメント経験を活かし、
-            プロダクト開発からチーム育成まで幅広く貢献できます。
-          </Text>
         </Stack>
 
         {/* 職務経歴セクション */}
