@@ -218,9 +218,11 @@ export default function Home() {
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
-                    p: (props) => <Text whiteSpace="pre-wrap" {...props} />,
+                    p: (props) => (
+                      <Text whiteSpace="pre-wrap" p={1} {...props} />
+                    ),
                     strong: (props) => (
-                      <Text as="span" fontWeight="bold" {...props} />
+                      <Text as="span" fontWeight="bold" p={1} {...props} />
                     ),
                   }}
                 >
