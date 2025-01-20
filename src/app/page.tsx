@@ -79,7 +79,7 @@ const workHistory = [
 2023年よりEMとして開発生産性の向上や採用・評価などの組織づくりに関わるようになりました。`,
   },
   {
-    period: "2021/06 - 2022/06",
+    period: "2021/06-2022/06",
     company: "PharmaX株式会社",
     type: "業務委託",
     description: `慢性的な体の不調について薬剤師にLINEで相談できるオンライン型薬局サービスを提供。
@@ -90,7 +90,7 @@ const workHistory = [
 • 薬剤師向けにデータの民主化の啓蒙: 薬剤師がSQLを書けるようになるために基盤の整備・勉強の企画/運営`,
   },
   {
-    period: "2020/05 - 2021/05",
+    period: "2020/05-2021/05",
     company: "株式会社セルフケアテクノロジーズ",
     type: "業務委託",
     description: `自己流では難しい運動・食事の習慣化をテーマにしたオンラインパーソナル型フィットネスサービスを提供。
@@ -100,7 +100,7 @@ const workHistory = [
 • オンラインパーソナル型フィットネスサービスの開発: エンジニアとしてRuby on Railsを用いたMVP開発・高単価化に必要な機能開発`,
   },
   {
-    period: "2019/01 - 2020/04",
+    period: "2019/01-2020/04",
     company: "株式会社シューマツワーカー",
     type: "業務委託",
     description: `副業をしたいワーカーと企業をつなぐ副業マッチングプラットフォームを提供。ワーカー向けの予実管理サービスをリリースしました。
@@ -108,7 +108,7 @@ const workHistory = [
 • ワーカー向けの予実管理サービスの開発: エンジニアとしてRuby on Railsを用いた開発`,
   },
   {
-    period: "2018/01 - 2018/12",
+    period: "2018/01-2018/12",
     company: "株式会社palan",
     type: "業務委託",
     description: `React Nativeを用いたモバイルアプリの受託開発サービスを提供。Beauty naviという美容室検索サイトのモバイルアプリ(WebView)を在籍中に新規開発・リリース。
@@ -119,7 +119,7 @@ R&D活動としてWebのReact VR・ARを用いたPoC開発をリード。この�
 • Web VR・AR領域の研究/PoC開発: Web VR・ARの開発基盤構築・PoC開発をリード`,
   },
   {
-    period: "2017/01 - 2017/12",
+    period: "2017/01-2017/12",
     company: "株式会社ベストティーチャー",
     type: "業務委託",
     description: `英語で自分が話したいことを書き出し、講師が添削したスクリプトをもとに会話を行う オンライン英会話サービスを提供。
@@ -132,7 +132,7 @@ R&D活動としてWebのReact VR・ARを用いたPoC開発をリード。この�
 • WebフロントエンドのリードエンジニアとしてReactのアーキテクト・導入: Reactの開発基盤構築・Reactを用いてベストレを開発`,
   },
   {
-    period: "2016/01 - 2016/12",
+    period: "2016/01-2016/12",
     company: "株式会社ペライチ",
     type: "業務委託",
     description: `ベトナム駐在時にオフショア会社の内部にいたことでより多くの業種で働きたいと思うようになり、フリーランスに転向。
@@ -142,7 +142,7 @@ Webフロントエンドやサーバーサイドまで広く担当し、在籍�
 • ノーコードHP作成サービス・ペライチの開発: エンジニアとしてCakePHP・Backbone.jsを用いた機能開発を担当。`,
   },
   {
-    period: "2014/05 - 2015/12",
+    period: "2014/05-2015/12",
     company: "株式会社コムニコ",
     type: "正社員",
     description: `ベンチャーでのスモールチームでの事業開発との相性が良く、本格的にプロダクト開発に関わってみたいと考え、支援先のコムニコに転職。
@@ -154,7 +154,7 @@ SPAへのシステムリプレース・新機能開発・ベトナム人エン�
 • ベトナム人メンバーのコード品質チェック: エンジニアリーダーとしてベトナム人メンバーのコード・設計レビューを担当。`,
   },
   {
-    period: "2012/04 - 2014/04",
+    period: "2012/04-2014/04",
     company: "ニフティ株式会社",
     type: "正社員",
     description: `2012年から2014年までニフティ株式会社のベンチャー支援を行う部署で、アプリケーションエンジニアとして業務に従事しました。支援先のベンチャー企業の新規事業としてSNS管理SaaSの立ち上げにおけるシステム設計、開発、検証、リリースまで担当しました。
@@ -200,11 +200,8 @@ export default function Home() {
           </Heading>
           {workHistory.map((work, index) => (
             <Box key={index} w="full" p={6} borderWidth={1} borderRadius="lg">
-              <Text fontWeight="bold" mb={2}>
-                {work.period}
-              </Text>
-              <Text fontSize="lg" mb={2}>
-                {work.company} - {work.type}
+              <Text fontWeight="bold" fontSize="2xl" mb={2}>
+                {work.company}（{work.period}） {work.type}
               </Text>
               <Text color="gray.600" whiteSpace="pre-wrap">
                 {work.description}
