@@ -167,7 +167,7 @@ export default function Home() {
             <Heading as="h1" size="xl" mb={2}>
               MASARU FURUYA
             </Heading>
-            <Text fontSize="lg" color="gray.600">
+            <Text fontSize="lg" color="gray.800">
               Software Engineer / Engineering Manager
             </Text>
           </Box>
@@ -183,7 +183,7 @@ export default function Home() {
               <Text fontWeight="bold" fontSize="2xl" mb={2}>
                 {work.company}（{work.period}） {work.type}
               </Text>
-              <Box color="gray.600">
+              <Box color="gray.800">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{
@@ -227,7 +227,7 @@ export default function Home() {
                         {skill.level}
                       </Badge>
                     </Text>
-                    <Text fontSize="sm" color="gray.600">
+                    <Text fontSize="sm" color="gray.800">
                       {skill.comment}
                     </Text>
                   </Box>
