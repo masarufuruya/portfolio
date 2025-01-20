@@ -20,21 +20,33 @@ const skills = {
       name: "Ruby on Rails",
       level: "⭐️",
       comment:
-        "実務で5年以上の経験。要件を理解して自分で設計しながらコードを書くことができるレベル",
+        "実務で5年以上の経験。要件を理解して自分で設計しながらコードを書くことができるレベル。Rails way+Service Objectの経験が多い。現職はクリーンアーキテクチャ。",
     },
-    { name: "Nest.js", level: "▲", comment: "個人開発で使用中" },
+    {
+      name: "NestJS",
+      level: "▲",
+      comment:
+        "個人開発で使用。フロントエンドでTypeScriptを使っているのでバックエンドもTypeScriptで型を導入できるように学習中。",
+    },
     {
       name: "Firebase",
       level: "⭕️",
-      comment: "実務と個人開発でFirestoreを利用",
+      comment:
+        "実務と個人開発でFirestoreを利用。なるべくNoSQLにはデータを持たせないようにシンプルなコレクション設計を心がけている",
     },
-    { name: "Supabase", level: "▲", comment: "個人開発で使用経験あり" },
+    {
+      name: "Supabase",
+      level: "▲",
+      comment:
+        "個人開発で使用。今はStorageでしか使っていないが、今後はDBも使いたい",
+    },
   ],
   フロントエンド: [
     {
       name: "React",
-      level: "⭐️",
-      comment: "実務で2年以上の経験",
+      level: "⭕️",
+      comment:
+        "実務と個人開発で使用。フレームワークはNext.js。CSSフレームワークはChakraUIとTailwindを最近はよく使う",
     },
     {
       name: "Vue.js",
@@ -42,21 +54,25 @@ const skills = {
       comment:
         "Ruby on Railsのテンプレートエンジンとの併用を業務で経験あり（Vue2系）Nuxt.jsは組まれたLPを保守したことがある程度。既存のVue.jsのプロジェクトを調べながら自分で実装・テストコードを書いていくことはできるレベル感",
     },
-    { name: "React Native", level: "▲", comment: "個人開発で使用経験あり" },
-    { name: "Flutter", level: "▲", comment: "個人開発で使用経験あり" },
+    {
+      name: "React Native",
+      level: "▲",
+      comment:
+        "以前は業務で使っていたが最近は触っていないので、キャッチアップは必要。個人開発で利用予定",
+    },
+    { name: "Flutter", level: "▲", comment: "個人開発で触ったことがある程度" },
   ],
   インフラ: [
-    { name: "Terraform", level: "⭕️", comment: "実務で2年以上の経験" },
-    { name: "GCP", level: "⭐️", comment: "実務で3年以上の経験" },
-    { name: "AWS", level: "⭕️", comment: "実務で2年以上の経験" },
+    { name: "GCP", level: "⭕️", comment: "実務で利用中" },
+    { name: "AWS", level: "⭕️", comment: "以前実務で利用" },
   ],
   マネジメント: [
     {
       name: "スクラム/デリバリーマネジメント",
       level: "⭐️",
-      comment: "5年以上の経験",
+      comment: "現職で担当",
     },
-    { name: "ピープルマネジメント", level: "⭕️", comment: "3年以上の経験" },
+    { name: "ピープルマネジメント", level: "⭕️", comment: "現職で担当" },
   ],
 };
 
