@@ -13,24 +13,24 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const links = [
   {
-    platform: "Zenn",
-    url: "https://zenn.dev/nana",
+    platform: "X",
+    url: "https://x.com/enzerubank",
   },
   {
-    platform: "Note",
-    url: "https://note.com/eve_key/",
+    platform: "GitHub",
+    url: "https://github.com/masarufuruya",
+  },
+  {
+    platform: "Zenn",
+    url: "https://zenn.dev/masarufuruya",
+  },
+  {
+    platform: "note",
+    url: "https://note.com/masaru_furuya",
   },
   {
     platform: "Qiita",
-    url: "https://qiita.com/yugo-ibuki",
-  },
-  {
-    platform: "Reading Book Blog",
-    url: "https://ugo-ev.hatenablog.com/",
-  },
-  {
-    platform: "Novel",
-    url: "https://sizu.me/ugo",
+    url: "https://qiita.com/masarufuruya",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function Links() {
   return (
     <Box minH="100vh">
       <Navigation />
-      <Container maxW="container.lg" py={8}>
+      <Container maxW="container.lg" py={8} px={12}>
         <Stack direction="column" spacing={8}>
           <Box display="flex" alignItems="center" gap={3} mt={16}>
             <Icon viewBox="0 0 24 24" boxSize={8}>
@@ -65,8 +65,6 @@ export default function Links() {
                   alignItems="center"
                   gap={2}
                   fontSize="lg"
-                  color="gray.700"
-                  _hover={{ color: link.color }}
                 >
                   {link.url}
                   <ExternalLinkIcon />
