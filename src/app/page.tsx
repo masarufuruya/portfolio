@@ -74,15 +74,21 @@ const workHistory = [
     period: "2022/04 - 現在",
     company: "株式会社ABC",
     type: "正社員",
-    description:
-      "テックリード・エンジニアリングマネージャーとして、チームマネジメントとテクニカルリーダーシップを担当。新規プロダクト開発におけるアーキテクチャ設計、技術選定、チーム編成を主導。Next.js、NestJS、GCPを用いたマイクロサービスアーキテクチャの設計・実装を行う。",
+    description: `テックリード・エンジニアリングマネージャーとして、チームマネジメントとテクニカルリーダーシップを担当。
+
+新規プロダクト開発におけるアーキテクチャ設計、技術選定、チーム編成を主導。
+
+Next.js、NestJS、GCPを用いたマイクロサービスアーキテクチャの設計・実装を行う。`,
   },
   {
     period: "2019/04 - 2022/03",
     company: "株式会社XYZ",
     type: "フリーランス",
-    description:
-      "フルスタックエンジニアとして、複数のプロジェクトに参画。Ruby on Rails、React、AWS を用いたWebアプリケーション開発を担当。アジャイル開発手法を導入し、開発プロセスの改善に貢献。",
+    description: `フルスタックエンジニアとして、複数のプロジェクトに参画。
+
+Ruby on Rails、React、AWS を用いたWebアプリケーション開発を担当。
+
+アジャイル開発手法を導入し、開発プロセスの改善に貢献。`,
   },
 ];
 
@@ -128,7 +134,9 @@ export default function Home() {
               <Text fontSize="lg" mb={2}>
                 {work.company} - {work.type}
               </Text>
-              <Text color="gray.600">{work.description}</Text>
+              <Text color="gray.600" whiteSpace="pre-wrap">
+                {work.description}
+              </Text>
             </Box>
           ))}
         </Stack>
