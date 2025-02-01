@@ -21,6 +21,7 @@ import { usePathname } from "next/navigation";
 const MENU_ITEMS = [
   { name: "Background", path: "/" },
   { name: "Web Links", path: "/links" },
+  { name: "Blog", path: "https://masarufuruya.com/", isExternal: true },
 ];
 
 export function Navigation() {
@@ -38,7 +39,9 @@ export function Navigation() {
           py={2}
           rounded="md"
           _hover={{ bg: "gray.100" }}
-          bg={pathname === item.path ? "gray.100" : "transparent"}
+          bg={!item.isExternal && pathname === item.path ? "gray.100" : "transparent"}
+          target={item.isExternal ? "_blank" : undefined}
+          rel={item.isExternal ? "noopener noreferrer" : undefined}
         >
           {item.name}
         </Link>
