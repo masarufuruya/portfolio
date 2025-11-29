@@ -21,7 +21,6 @@ import { usePathname } from "next/navigation";
 const MENU_ITEMS = [
   { name: "Background", path: "/" },
   { name: "Web Links", path: "/links" },
-  { name: "Blog", path: "https://masarufuruya.com/", isExternal: true },
 ];
 
 export function Navigation() {
